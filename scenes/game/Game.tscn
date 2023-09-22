@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/game/MapGenerator.gd" type="Script" id=1]
+[ext_resource path="res://scenes/game/Game.gd" type="Script" id=2]
+[ext_resource path="res://scenes/floor/FloorDefault.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/floor/FloorEmpty.tscn" type="PackedScene" id=5]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="MapManager" type="Node2D" parent="."]
+script = ExtResource( 1 )
+floorDefault = ExtResource( 3 )
+floorEmpty = ExtResource( 5 )
+player = ExtResource( 4 )
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="Floor" type="YSort" parent="Map"]
+
+[node name="Entities" type="YSort" parent="Map"]
