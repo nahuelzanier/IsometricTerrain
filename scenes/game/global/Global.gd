@@ -1,8 +1,9 @@
+#SINGLETON
+
 extends Node
 
 var ISO_WIDTH = 32
 var ISO_HEIGHT = 16
-var det = 1/(ISO_WIDTH*ISO_HEIGHT/4 + ISO_WIDTH*ISO_HEIGHT/4)
 
 func move_to_coordinates(node, iso_x, iso_y):
 	node.position = _iso_to_pos(iso_x, iso_y)
